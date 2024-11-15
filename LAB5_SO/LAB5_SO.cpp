@@ -35,7 +35,7 @@ void simulateProcess(int processId) {
         if (coin(gen) == 2) {
             *sharedMemory = counter++;
             cout << "Proces " << processId << " a scris: " << *sharedMemory << "\n";
-            //this_thread::sleep_for(chrono::milliseconds(10));
+            this_thread::sleep_for(chrono::milliseconds(10));
         }
         ReleaseSemaphore(hSemaphore, 1, NULL);
     }

@@ -28,7 +28,7 @@ void simulateProcess(int processId) {
         CloseHandle(hMapFile);
         return;
     }
-    int counter = 1;a
+    int counter = 1;
     while (counter <= 1000) {
         WaitForSingleObject(hSemaphore, INFINITE);
         cout << "Proces " << processId << " a citit: " << *sharedMemory << "\n";
